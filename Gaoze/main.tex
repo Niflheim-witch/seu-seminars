@@ -1,0 +1,100 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{神经网络深度学习\\
+{\footnotesize \textsuperscript{}}
+\thanks{Identify applicable funding agency here. If none, delete this.}
+}
+
+\author{\IEEEauthorblockN{\textsuperscript{} 高泽}
+\IEEEauthorblockA{\textit{} \\
+\textit{}\\
+南京,中国\\
+}
+
+}
+
+\maketitle
+
+\begin{abstract}
+神经网络是一种受到人类神经系统启发的机器学习模型，用于处理和学习复杂的非线性关系。它由大量的人工神经元（或称为节点）组成，这些神经元以连接方式相互联系，形成一个网络。每个神经元以输入数据加权和加总的方式来计算输出值，并通过激活函数进行非线性转换。这些权重和激活函数的设定是通过训练过程中的反向传播算法进行优化。
+\end{abstract}
+
+\begin{IEEEkeywords}
+深度学习
+\end{IEEEkeywords}
+
+\section{兴趣方向}
+ 
+我的兴趣方向是神经网络方向，因为神经网络算法是一种基于计算机模拟神经系统运行规律的人工智能算法，它的主要作用是模仿人脑的学习和识别机制，实现智能化的数据处理、分类、预测等任务，故该算法可以广泛应用于图像识别、语音识别、自然语言处理、医疗影像分析等领域，我认为它是掌握未来的钥匙。
+\section{经典论文简述}
+
+论文题目为对于图像识别的深度残差网络学习（Deep Residual Learning for Image Recognition）
+论文针对深度神经网络中的梯度消失和表达能力不足问题，提出了残差学习（ResNet）的方法。论文首先指出在训练深度神经网络时，随着网络深度的增加，网络表达能力会逐渐减弱，这是由于梯度消失问题造成的。为了解决这个问题，论文提出了残差学习的思想，通过引入残差块来逐层学习残差函数，使得网络可以更好地适应训练数据。
+
+具体而言，残差块由两个卷积层组成，每个卷积层后面都有一个批量归一化层和一个ReLU激活函数。此外，论文提出了一种跳跃连接的方式，将输入直接连接到输出，形成了一个残差单元。这样做的好处是，即使残差为零，网络也可以轻松地学习一个恒等映射，从而减少了学习的难度。
+
+为了验证残差学习的有效性，论文在ImageNet数据集上进行了大量的实验。实验结果表明，使用残差学习的网络能够取得更好的性能，并且可以训练更深的网络。此外，论文还对残差学习进行了进一步的分析和讨论，探讨了网络深度、网络宽度等因素对性能的影响。
+
+总结起来，这篇论文提出了残差学习的方法来解决深度神经网络中的梯度消失和表达能力不足问题。通过引入残差块和跳跃连接，网络可以更好地适应训练数据并提高性能。这一方法的提出对深度学习的发展和应用具有重要的意义。
+其中引出了
+\begin{equation}
+Y= F(x, {Wi}) + Wsx
+\end{equation}
+的式子来计算影响系数
+
+
+
+
+\begin{table}[htbp]
+\caption{}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{model}& \textbf{\textit{top-1 err}}& \textbf{\textit{ top-5 err}}\\
+\hline
+Head & top-1 err& top-5 err\\
+\hline
+ VGG-16 [40] &28.07 &9.33\\
+\hline
+GoogLeNet[43]& - &9.15\\
+\hline
+PReLU-net [12] &24.27 &7.38
+\\
+
+
+\end{tabular}
+\label{tab1}
+\end{center}
+\end{table}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics{fig2.png}}
+\caption{模型拟合程度.}
+\label{fig}
+\end{figure}
+\section{延伸阅读}
+神经网络是一种计算模型，受启发于生物神经系统的结构和功能。它由多层神经元（节点）组成，每个神经元都与下一层的神经元连接。每个连接都有一个权重，用于调整信息在网络中的传递强度。神经网络的基本单位是神经元，它接收来自上一层神经元的输入，并对输入进行加权求和，然后通过一个激活函数（如Sigmoid、ReLU等）进行非线性变换，最终输出到下一层神经元。通过反复的前向传播和反向传播过程，神经网络可以学习到输入和输出之间的复杂映射关系。神经网络的训练过程通常采用梯度下降算法及其变种，通过调整网络中各个连接的权重，使网络的输出尽可能地接近期望的输出。这个过程被称为监督学习，其中训练数据包含了输入和对应的标签或目标输出。神经网络在各个领域中广泛应用，如图像识别、语音识别、自然语言处理等。它具有强大的表达能力和适应性，能够从大量的数据中提取和学习特征，并进行高效的模式识别和预测。总之，神经网络是一种模仿生物神经系统工作原理的计算模型，通过多层神经元的组织和学习算法，实现对输入和输出之间复杂映射关系的建模和预测。
+\begin{thebibliography}{00}
+\bibitem{b1}S. V. Georgakopoulos, S. K. Tasoulis, A. G. Vrahatis, and V. P. Plagianakos. Convolutional Neural Networks for Toxic Comment Classification. In SETN, 2018.
+\bibitem{b2} Bell, R., Koren, Y. Lessons from the 
+netflix prize challenge. ACM SIGKDD 
+Explor. Newsl. 9, 2 (2007), 75–79
+\bibitem{b3} M. D. Zeiler and R. Fergus. Visualizing and understanding convolutional neural networks. In ECCV, 2014.
+
+\end{thebibliography}
+
+
+\end{document}
