@@ -59,8 +59,8 @@ Markdown 支持许多数学符号及特殊符号等，并且支持 LaTeX 公式�
 
 ## 图片和超链接
 
-  - `<img src="图片地址" height="高度" width="宽度">`
-  - `<div></div>`来控制图片排版。
+<img src="https://github.com/EthanHu777/seu-seminars/blob/main/images/boy.jpg" height="高度" width="宽度">
+
 
 - 超链接 `[链接标题](链接地址 "链接title")`
 
